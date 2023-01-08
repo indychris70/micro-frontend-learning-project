@@ -21,19 +21,17 @@ This project contains two micro front ends (one created with Vue and one created
 
 ### Create Welcome (Vue)
 
+In this scenario, there is one team that is responsible for the Welcome page and the Sign In page. That team uses Vue for the front end framework.
+
 - `vue create welcome` (select Vue 2 option)
 - `cd welcome`
 - `vue add router`
   - select `yes` for all prompts
+  - This will create an app with some default pages that don't match what we need, so make changes to match [this commit](https://github.com/indychris70/micro-frontend-learning-project/commit/83788dddb7c15c7067d68dfb13728b7e3eb875a1#diff-3a89b567a8beee00b0b0412c8680f12d3cf4e4d66c37ac933b4974377352642f).
 - `yarn serve`
 
-Make the following changes
+### Create Music (React)
 
-Move the `nav` code from `App.vue` to `HomeView.vue`
+In this scenario, there is another team that is responsible for the Music page. That team uses React for the front end framework.
 
-```html
-<nav>
-  <router-link to="/">Home</router-link> |
-  <router-link to="/signin">signin</router-link>
-</nav>
-```
+- `npx create-react-app music`
